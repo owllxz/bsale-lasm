@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace 'api' do
     namespace 'v1' do
+      resources :products
+    end
+  end
+  namespace 'api' do
+    namespace 'v1' do
       resources :categorys
     end
   end
