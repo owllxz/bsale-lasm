@@ -1,6 +1,15 @@
 # README
 
-![Alt Text](https://media.giphy.com/media/HfTuxthNowgsFxIKFj/giphy.gif)
+BSALE - DESAFIO
+Nombre: Luis Sepulveda Martinez
+
+
+![Alt Text](https://media.giphy.com/media/etteBIiZqGF5LHqOen/giphy.gif)
+
+
+- Framework Api Rest: Rails 7.0.1
+- Database: Mysql
+
 
 
 This README would normally document whatever steps are necessary to get the
@@ -17,7 +26,6 @@ Things you may want to cover:
 * Database creation
 
 * Database initialization
-<iframe src="https://giphy.com/embed/HfTuxthNowgsFxIKFj" width="480" height="256" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/HfTuxthNowgsFxIKFj">via GIPHY</a></p>
 
 * How to run the test suite
 
