@@ -1,7 +1,5 @@
-# README
-
-*BSALE - DESAFIO
-*Nombre: Luis Sepulveda Martinez
+# BSALE - DESAFIO
+* ME: Luis Sepulveda Martinez
 
 
 ![Alt Text](https://media.giphy.com/media/etteBIiZqGF5LHqOen/giphy.gif)
@@ -34,3 +32,4 @@
     ![Alt Text](https://media.giphy.com/media/HfTuxthNowgsFxIKFj/giphy.gif)
     
     ![Alt Text](https://media.giphy.com/media/YazqsJbKNPelyIlnSq/giphy.gif)
+- El controlador de categorias solo cuenta con una definicion(Index), la cual nos permite obtener todas la categorias.
