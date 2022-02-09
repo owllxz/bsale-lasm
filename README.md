@@ -14,7 +14,8 @@
 - Repository Hosting: Github
 - Aplicaciones adicionales usadas: Postman
 
-# Deploy: https://quiet-oasis-51544.herokuapp.com/
+# Deploy API(BACK-END): https://quiet-oasis-51544.herokuapp.com/ - 
+# Deploy-REPOSITORY UI(FRONT-END): https://salty-coast-61716.herokuapp.com/ - https://github.com/owllxz/bsale-lasm-ui
 # Api (v1)
 - Productos: https://quiet-oasis-51544.herokuapp.com/api/v1/products
 - Categorias: https://quiet-oasis-51544.herokuapp.com/api/v1/categorys
