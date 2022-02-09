@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 # README
 
+![Alt Text](https://media.giphy.com/media/HfTuxthNowgsFxIKFj/giphy.gif)
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -25,4 +25,3 @@ Things you may want to cover:
 * ...
 =======
 # bsale-lasm
->>>>>>> c4fbce66c99709c840f6651d6d98453f40f1d2d9
