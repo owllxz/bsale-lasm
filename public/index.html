@@ -65,6 +65,8 @@
     $(document).ready(function(){
         $.ajax({
             url: url_base + 'api/v1/products',
+            headers: {  'Access-Control-Allow-Origin': url_base },
+            type: 'dataType',
             data: {
                 format: 'json'
             },
