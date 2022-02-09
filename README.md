@@ -5,7 +5,7 @@
 ![Alt Text](https://media.giphy.com/media/etteBIiZqGF5LHqOen/giphy.gif)
 
 # Especificaciones Tecnicas
-- Framework Api Rest(Back-End): Rails 7.0.1
+- Framework Api Rest(Back-End): Rails 7.0.1 (Ruby)
 - Database: Mysql
 - Bibliotecas usadas Front-End: Jquery, FontAwesome, Bootstrap.
 - IDE: Visual Studio Code
