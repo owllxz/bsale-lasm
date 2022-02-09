@@ -22,7 +22,7 @@
     <!--Header-->
     <div>
         <nav class="navbar navbar-light bg-light justify-content-center shadow p-3 mb-5 bg-body rounded">
-            <a class="navbar-brand">Bsale Test - LASM</a>
+            <a class="navbar-brand" href="index.html">Bsale Test - LASM</a>
             <div class="d-flex">
             <!--Search-->
             <form class="d-flex">
@@ -37,13 +37,7 @@
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Todos</a></li>
-                <li class="breadcrumb-item"><a href="#">Todos</a></li>
-                <li class="breadcrumb-item"><a href="#">Todos</a></li>
-                <li class="breadcrumb-item"><a href="#">Todos</a></li>
-                <li class="breadcrumb-item"><a href="#">Todos</a></li>
-                <li class="breadcrumb-item"><a href="#">Todos</a></li>
+            <ol class="breadcrumb" id="categorias">
             </ol>
         </nav>
         </div>
@@ -87,9 +81,54 @@
                 $('#productos').html(txt);
             },
             type: 'GET'
-        }
+        } 
+        );
+        //AJAX - Obtener las categorias y colocarlas en una especie de menu
+        $.ajax({
+            url: 'http://127.0.0.1:3000/api/v1/categorys',
+            data: {
+                format: 'json'
+            },
+            error: function(){
+                $("#categorias").html('<p>Error</p>');
+            },
+            success: function(data){ 
+                var i = 0;
+                var txt = "";
+                while(i < data["data"].length){
+                    var categoria = data["data"][i];
+                    txt += '<button class="btn btn-light" id="'+ categoria["id"] +'" onclick="ajax2($(this));return false;">'+categoria["name"].toUpperCase()+'</button>'
+                    i += 1;
+                }
+                $('#categorias').html(txt);
+            },
+            type: 'GET'
+        } 
         );
     });
+    function ajax2($this) {
+      var id = $this.attr("id");
+      $.ajax({
+        url: 'http://127.0.0.1:3000/api/v1/products/' + id,
+            data: {
+                format: 'json'
+            },
+            error: function(){
+                $("#productos").html('<p>Error</p>');
+            },
+            success: function(data){ 
+                var i = 0;
+                var txt = "";
+                while(i < data["data"].length){
+                    var producto = data["data"][i];
+                    txt += '<div class="card m-2" style="width: 18rem;"><img src="'+producto["url_image"]+'" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">'+producto["name"]+'</h5><p class="card-text">$ '+producto["price"]+'</p><a href="#" class="btn btn-dark"><i class="fas fa-plus"></i></a></div></div>'
+                    i += 1;
+                }
+                $('#productos').html(txt);
+            },
+            type: 'GET'
+      });
+    }
     //AJAX - Obtener Productos Mediante Deteccion de Letras Escritas
     $('#search').keydown(function(){
         $.ajax({
