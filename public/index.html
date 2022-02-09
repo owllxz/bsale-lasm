@@ -60,10 +60,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!--Script-->
 <script>
+    url_base = "https://quiet-oasis-51544.herokuapp.com/" // Modificar a la url correspondiente
     //AJAX - Obtener Productos En Carga de Pagina
     $(document).ready(function(){
         $.ajax({
-            url: 'http://127.0.0.1:3000/api/v1/products',
+            url: url_base + 'api/v1/products',
             data: {
                 format: 'json'
             },
@@ -85,7 +86,7 @@
         );
         //AJAX - Obtener las categorias y colocarlas en una especie de menu
         $.ajax({
-            url: 'http://127.0.0.1:3000/api/v1/categorys',
+            url: url_base + 'api/v1/categorys',
             data: {
                 format: 'json'
             },
@@ -109,7 +110,7 @@
     function ajax2($this) {
       var id = $this.attr("id");
       $.ajax({
-        url: 'http://127.0.0.1:3000/api/v1/products/' + id,
+        url: url_base + 'api/v1/products/' + id,
             data: {
                 format: 'json'
             },
@@ -132,7 +133,7 @@
     //AJAX - Obtener Productos Mediante Deteccion de Letras Escritas
     $('#search').keydown(function(){
         $.ajax({
-            url: 'http://127.0.0.1:3000/api/v1/products/' + $('#search').val(),
+            url: url_base + 'api/v1/products/' + $('#search').val(),
             data: {
                 format: 'json'
             },
@@ -156,7 +157,7 @@
     // AJAX - Obtener Productos Mediante Boton
     function ajax(){
         $.ajax({
-            url: 'http://127.0.0.1:3000/api/v1/products/' + $('#search').val(),
+            url: url_base + 'api/v1/products/' + $('#search').val(),
             data: {
                 format: 'json'
             },
